@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// AI NPC의 전체 상호작용 흐름을 관리하는 클래스
+// 사용자 음성 입력 -> 응답 생성 -> 상태 분기 -> NPC 출력까지의 흐름 담당
 public class NPCInteractionManager : MonoBehaviour
 {
     public VoiceRecorder voiceRecorder; // VoiceRecorder를 직접 연결

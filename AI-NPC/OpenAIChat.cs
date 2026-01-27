@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 using TMPro;
 using System.IO;
 
+// LLM(OpenAI API)을 호출하여 사용자 질문에 대한 응답을 생성
+// 재난 상황 정보를 함께 전달하여 상황 기반 응답을 생성하도록 설계
+
 public class OpenAIChat : MonoBehaviour
 {
     public string apiKey = ""; // OpenAI API 키
@@ -140,8 +143,8 @@ public class OpenAIChat : MonoBehaviour
 
         var messages = new[]
         {
-            new { role = "system", 
-            content = "자기소개 단어 포함 질문 시에만 \"궁금하신게 있으면 언제든지 물어봐주세요!\"라는 말을 포함해서 답변합니다." 
+            new { role = "system",
+            content = "자기소개 단어 포함 질문 시에만 \"궁금하신게 있으면 언제든지 물어봐주세요!\"라는 말을 포함해서 답변합니다."
                         +"현재 플레이어는 화재 대피 상황으로 대피하는 중입니다."
                         +"플레이어가 \"여기로 가는게 맞아?\"라는 말이 포함된 질문을 할 경우 \"아니요, 화면에 표시되는 화살표를 따라가야 가장 안전하고 빠른 대피경로입니다.\"를 답변합니다."
                         +"플레이어가 \"나 따라해\"라는 말을 포함해서 질문할 경우 플레이어의 \"나 따라해\"를 제외한 뒤의 말을 따라하세요"
@@ -150,7 +153,7 @@ public class OpenAIChat : MonoBehaviour
                         +"**2층 계단과 1층 엘레베이터**는 **사람이 밀집**되어 있어 위험하므로 피하세요."
                         +"가장 안전한 대피 경로는 **1층 정문**입니다."
             },
-            
+
             new { role = "user", content = userMessage }
         };
 

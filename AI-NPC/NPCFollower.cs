@@ -1,5 +1,8 @@
 using UnityEngine;
 
+// NPC가 사용자를 따라 이동하거나 특정 경로를 안내하도록 제어하는 클래스
+// 재난 대피 시 NPC의 위치 이동 및 추적 로직을 담당
+
 public class NPCFollower : MonoBehaviour
 {
     public Transform player; // 플레이어 Transform (카메라 또는 XR Rig)
@@ -34,13 +37,13 @@ public class NPCFollower : MonoBehaviour
         if (player != null && playerCamera != null)
         {
             // 플레이어의 카메라 방향을 기준으로 NPC 위치 설정
-            Vector3 cameraForward = playerCamera.forward; 
+            Vector3 cameraForward = playerCamera.forward;
             cameraForward.y = 0; // 수평 방향만 사용 (Y축 영향 제거)
             cameraForward.Normalize();
 
             // 오프셋을 카메라 방향에 따라 조정
             Vector3 dynamicOffset = cameraForward * offset.z + playerCamera.right * offset.x;
-            
+
             // NPC가 플레이어와 같은 높이에서 위치하도록 수정
             Vector3 targetPosition = player.position + dynamicOffset;
             targetPosition.y = player.position.y + offset.y; // 플레이어의 높이 + 오프셋

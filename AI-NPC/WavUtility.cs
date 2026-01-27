@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 
+// 오디오 데이터의 WAV 변환 및 처리를 위한 유틸리티 클래스
+
 public static class WavUtility
 {
     public static AudioClip ToAudioClip(byte[] fileBytes, int offsetSamples = 0, string name = "GeneratedAudio")

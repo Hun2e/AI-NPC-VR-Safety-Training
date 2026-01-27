@@ -1,6 +1,8 @@
 using System.IO;
 using UnityEngine;
 
+// 오디오 데이터를 WAV 파일 형식으로 저장하는 유틸리티 클래스
+
 public static class SavWav
 {
     public static bool Save(string filename, AudioClip clip)

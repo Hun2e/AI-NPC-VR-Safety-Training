@@ -4,10 +4,13 @@ using UnityEngine.Networking;
 using System.IO;
 using System;
 
+// 사용자의 음성 입력을 텍스트로 변환하는 STT 처리 클래스
+// VR 환경에서 녹음된 음성 데이터를 Google STT API로 전달
+
 public class GoogleSpeechToText : MonoBehaviour
 {
     public string apiKey = ""; // Google STT API 키
-    
+
 
     public void ConvertSpeechToText(string filePath, System.Action<string> callback)
     {

@@ -2,6 +2,9 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 
+// VR 환경에서 사용자의 음성 입력을 녹음하는 클래스
+// 녹음된 음성은 STT 처리 단계로 전달됨
+
 public class VoiceRecorder : MonoBehaviour
 {
     private AudioClip audioClip;

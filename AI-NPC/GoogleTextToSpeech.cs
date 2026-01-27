@@ -4,11 +4,14 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
+// VR 환경에서 사용자의 음성 입력을 녹음하는 클래스
+// 녹음된 음성은 STT 처리 단계로 전달됨
+
 public class GoogleTextToSpeech : MonoBehaviour
 {
     public string apiKey = ""; // Google API 키
     public AudioSource audioSource; // Unity AudioSource 컴포넌트
-    
+
     // TTS 변환 함수
     public void ConvertTextToSpeech(string text)
     {
@@ -32,7 +35,7 @@ public class GoogleTextToSpeech : MonoBehaviour
 
     public void PlayResponse(string responseText)
     {
-    ConvertTextToSpeech(responseText); // OpenAI 응답을 TTS로 변환하여 재생
+        ConvertTextToSpeech(responseText); // OpenAI 응답을 TTS로 변환하여 재생
     }
 
     // TTS 요청을 처리하는 코루틴
