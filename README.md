@@ -1,4 +1,8 @@
-# 🧠 AI NPC 기반 VR 재난 대피 교육 시스템
+# 🧠 AI-NPC-VR-Safety-Training
+
+### AI NPC 기반 VR 재난 대피 교육 시스템
+
+---
 
 ## 📌 프로젝트 개요
 본 프로젝트는 **VR 환경에서 사용자의 음성 및 행동에 반응하는 AI NPC를 구현**하여  
