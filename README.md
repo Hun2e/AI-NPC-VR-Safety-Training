@@ -40,19 +40,27 @@ POSCO Academy AI Project의 일환으로 진행되었으며,
 ---
 
 ## 📂 레포지토리 구조
+
+```text
 AI-NPC-VR-Safety-Training  
-┣ AI-NPC  
-┃ ┣ NPCInteractionManager.cs # NPC 대화 및 상태 관리  
-┃ ┣ OpenAIChat.cs # LLM 기반 응답 처리  
-┃ ┣ GoogleSpeechToText.cs # 음성 인식(STT)  
-┃ ┣ GoogleTextToSpeech.cs # 음성 합성(TTS)  
-┃ ┣ VoiceRecorder.cs # 사용자 음성 녹음  
-┃ ┣ SavWav.cs / WavUtility.cs # 음성 파일 처리 유틸  
-┣ Optional-VR-Controls  
-┃ ┣ VR 이동 및 컨트롤 관련 스크립트  
-┣ docs  
-┃ ┗ presentation.pdf # 프로젝트 발표 자료  
-┗ README.md  
+│
+├── AI-NPC/ 
+│   ├── NPCInteractionManager.cs # NPC 대화 및 상태 관리  
+│   ├── OpenAIChat.cs # LLM 기반 응답 처리  
+│   ├── GoogleSpeechToText.cs # 음성 인식(STT)  
+│   ├── GoogleTextToSpeech.cs # 음성 합성(TTS)  
+│   ├── VoiceRecorder.cs # 사용자 음성 녹음  
+│   └── SavWav.cs / WavUtility.cs # 음성 파일 처리 유틸
+│
+├── Optional-VR-Controls/ 
+│   └── VR 이동 및 컨트롤 관련 스크립트
+│
+├── docs/  
+│   └── presentation.pdf # 프로젝트 발표 자료
+│
+└── README.md
+
+```
 
 ---
 
